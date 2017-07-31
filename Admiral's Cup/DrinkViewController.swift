@@ -10,13 +10,15 @@ import UIKit
 
 class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    @IBOutlet weak var drinkTableView: UITableView!
+    
     var detailLabelArray = ["Repeat", "Name", "Sound", "Snooze", "School"]
     var detailDisclosureArray = ["Never", "Alarm", "Marimba", "None", "None"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        drinkTableView.tableFooterView = UIView()
     }
     
     override func didReceiveMemoryWarning() {

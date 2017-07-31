@@ -10,13 +10,14 @@ import UIKit
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var menuTableView: UITableView!
+    
     var detailLabelArray = ["Repeat", "Name", "Sound", "Snooze", "School"]
     var detailDisclosureArray = ["Never", "Alarm", "Marimba", "None", "None"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        menuTableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
